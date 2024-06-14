@@ -6,9 +6,8 @@ Welcome to the Recipe Sharing Application, a monorepo project that combines a Ja
 
 This repository follows a monorepo approach, where multiple projects are stored in a single repository. The projects are organized as follows:
 
-* **recipeB**: The backend project, built using Java and Spring Boot. This project handles the server-side logic and API for the recipe sharing application.
-* **RecipeF**: The frontend project, built using Angular. This project handles the client-side logic and user interface for the recipe sharing application.
-
+* **recipeB**: The backend project
+* **RecipeF**: The frontend project
 ## About the Projects
 
 ### recipeB (Backend)
