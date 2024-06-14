@@ -1,6 +1,6 @@
 # Recipe Sharing Application
 
-Welcome to the Recipe Sharing Application, a beautifully crafted monorepo project that seamlessly blends a powerful Java Spring Boot backend with an intuitive Angular frontend, designed to tantalize your taste buds and ignite your culinary creativity!
+Welcome to the Recipe Sharing Application, a monorepo project that seamlessly blends a powerful Java Spring Boot backend with an intuitive Angular frontend, designed to tantalize your taste buds and ignite your culinary creativity!
 
 ## Repository Structure
 
