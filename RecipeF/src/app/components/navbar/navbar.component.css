@@ -1,0 +1,15 @@
+.main{
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px solid rgb(180, 180, 180);
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+#logo{
+    border-bottom: 2px solid rgb(0, 0, 0);
+  -webkit-user-select: none; /* for Chrome and Safari */
+  -moz-user-select: none; /* for Firefox */
+  -ms-user-select: none; /* for Internet Explorer */
+  user-select: none; /* for modern browsers */
+}

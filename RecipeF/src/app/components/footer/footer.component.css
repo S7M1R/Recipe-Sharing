@@ -1,0 +1,21 @@
+.footerBody {
+
+    position:absolute;
+    bottom: 0;
+     width: 100%;
+    height: 80px; /* use vh unit instead of % for height */
+    background-color: rgb(224, 238, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-user-select: none; /* for Chrome and Safari */
+    -moz-user-select: none; /* for Firefox */
+    -ms-user-select: none; /* for Internet Explorer */
+    user-select: none; /* for modern browsers */
+}
+.footerBody p{
+    font-family: sans-serif;
+    color: black;
+    font-weight: 550;
+
+}
