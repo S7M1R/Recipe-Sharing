@@ -32,11 +32,11 @@ To get started with the project, follow these steps:
 3. Navigate to the `RecipeF` directory and run `ng serve` to start the frontend server
 4. Open a web browser and navigate to `http://localhost:4200` to access the recipe sharing application
 
-**Contributing (Let's Spice Things Up!):**
+## Contributing (Let's Spice Things Up!):
 
 We crave your contributions! If you're brimming with culinary coding expertise, fork the repository and submit a pull request. We welcome your unique ingredients to enhance this recipe sharing experience for everyone.
 
-**Stay Tuned for Further Enhancements:**
+## Stay Tuned for Further Enhancements:
 
 We're constantly working on refining this application. Keep an eye out for exciting new features and updates to further elevate your recipe sharing journey!
 
