@@ -1,14 +1,13 @@
 # Recipe Sharing Application
 
-Welcome to the Recipe Sharing Application, a monorepo project that combines a Java Spring Boot backend with an Angular frontend.
+Welcome to the Recipe Sharing Application, a monorepo project that seamlessly blends a powerful Java Spring Boot backend with an intuitive Angular frontend, designed to tantalize your taste buds and ignite your culinary creativity!
 
 ## Repository Structure
 
 This repository follows a monorepo approach, where multiple projects are stored in a single repository. The projects are organized as follows:
 
-* **recipeB**: The backend project, built using Java and Spring Boot. This project handles the server-side logic and API for the recipe sharing application.
-* **RecipeF**: The frontend project, built using Angular. This project handles the client-side logic and user interface for the recipe sharing application.
-
+* **recipeB**: The backend project
+* **RecipeF**: The frontend project
 ## About the Projects
 
 ### recipeB (Backend)
@@ -33,6 +32,14 @@ To get started with the project, follow these steps:
 3. Navigate to the `RecipeF` directory and run `ng serve` to start the frontend server
 4. Open a web browser and navigate to `http://localhost:4200` to access the recipe sharing application
 
-## Contributing
+## Contributing (Let's Spice Things Up!):
 
-Contributions are welcome! If you'd like to contribute to the project, please fork the repository and submit a pull request.
+We crave your contributions! If you're brimming with culinary coding expertise, fork the repository and submit a pull request. We welcome your unique ingredients to enhance this recipe sharing experience for everyone.
+
+## Stay Tuned for Further Enhancements:
+
+We're constantly working on refining this application. Keep an eye out for exciting new features and updates to further elevate your recipe sharing journey!
+
+**Disclaimer:** While we strive for culinary perfection, the deployment as a single container feature is still under development. Rest assured, it's simmering away and will be ready to serve soon!
+
+**Bon Appétit!** ️
