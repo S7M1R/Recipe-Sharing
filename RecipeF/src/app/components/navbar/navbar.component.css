@@ -1,7 +1,12 @@
-.main{
-    padding: 0;
-    margin: 0;
-    border-bottom: 1px solid rgb(180, 180, 180);
+
+.main p{
+      padding: 0;
+      margin: 0;
+}
+.nav{
+      padding: 0;
+      margin: 0;
+      border-bottom: 1px solid rgb(180, 180, 180);
 }
 .example-spacer {
   flex: 1 1 auto;
@@ -12,4 +17,14 @@
   -moz-user-select: none; /* for Firefox */
   -ms-user-select: none; /* for Internet Explorer */
   user-select: none; /* for modern browsers */
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  margin: 0 10px;
 }

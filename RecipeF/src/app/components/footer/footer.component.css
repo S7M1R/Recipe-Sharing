@@ -2,10 +2,10 @@
 
     position:absolute;
     bottom: 0;
-     width: 100%;
-    height: 80px; /* use vh unit instead of % for height */
+    width: 100%;
+    height: 3.7rem; /* use vh unit instead of % for height */
     background-color: rgb(224, 238, 255);
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
     -webkit-user-select: none; /* for Chrome and Safari */
@@ -17,5 +17,4 @@
     font-family: sans-serif;
     color: black;
     font-weight: 550;
-
 }
