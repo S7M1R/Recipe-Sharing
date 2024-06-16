@@ -2,10 +2,11 @@
   position: absolute;
   margin: 0;
   padding: 0;
-  height: 90%;
-  width: 100vw;
+  height: fit-content;
+  width: inherit;
   background-color: rgb(219, 219, 219);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 55px;
 }
