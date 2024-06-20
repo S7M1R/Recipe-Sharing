@@ -30,7 +30,7 @@
 /* For small screens (e.g., mobile devices) */
 @media (max-width: 480px) {
   .fixed-btn {
-    bottom: 20px;
+    bottom: 30px;
     right: 10px;
   }
 }
@@ -38,7 +38,7 @@
 /* For medium screens (e.g., tablets) */
 @media (max-width: 768px) {
   .fixed-btn {
-    bottom: 20px;
-    right: 10px;
+    bottom: 6rem;
+    right: 2rem;
   }
 }

@@ -30,6 +30,11 @@ mat-card-title {
   font-weight: 600;
 }
 
+mat-card-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
 @media (min-width: 600px) {
   .example-card {
     margin: 2rem 2rem;

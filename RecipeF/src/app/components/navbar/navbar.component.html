@@ -1,13 +1,45 @@
 <div class="main">
-<p>
-  <mat-toolbar color="primary" class="nav" >
-    <mat-toolbar-row >
-      <span id="logo"><b>RECIPE</b></span>
-      <span class="example-spacer"></span>
-      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-        <mat-icon>menu</mat-icon>
-      </button>
-    </mat-toolbar-row>
-  </mat-toolbar>
-</p>
+  <p>
+    <mat-toolbar color="primary" class="nav">
+      <mat-toolbar-row>
+        <span id="logo"><b>RECIPE</b></span>
+        <span class="example-spacer"></span>
+        <button
+          mat-icon-button
+          class="example-icon"
+          aria-label="Example icon-button with menu icon"
+          (click)="toggleSideNav()"
+        >
+          <mat-icon>menu</mat-icon>
+        </button>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  </p>
+  <!-- Side panel -->
+  <mat-sidenav-container>
+    <mat-sidenav #sidenav mode="side" opened="false" position="end">
+      <mat-toolbar>
+        <span>User</span>
+      </mat-toolbar>
+      <mat-list>
+        <mat-list-item>
+          <img src="path/to/profile/picture" alt="Profile picture" />
+          <span>John Doe</span>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item *ngIf="!isLoggedIn" (click)="login()">
+          <mat-icon>login</mat-icon>
+          <span>Login</span>
+        </mat-list-item>
+        <mat-list-item *ngIf="isLoggedIn" (click)="logout()">
+          <mat-icon>logout</mat-icon>
+          <span>Logout</span>
+        </mat-list-item>
+        <mat-list-item *ngIf="isLoggedIn" (click)="viewProfile()">
+          <mat-icon>person</mat-icon>
+          <span>View Profile</span>
+        </mat-list-item>
+      </mat-list>
+    </mat-sidenav>
+  </mat-sidenav-container>
 </div>

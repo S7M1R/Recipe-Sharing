@@ -19,7 +19,7 @@ import { CreateRecipeFormComponent } from '../create-recipe-form/create-recipe-f
   styleUrl: './main.component.css',
 })
 export class MainComponent {
-  recipe = [1, 1, 1, 1, 1, 1];
+  recipe = [1, 1, 1, 1, 1, 1, 2, 2, 2, 2];
 
   constructor(public dialog: MatDialog) {}
   handleOpenCreateRecipeForm() {

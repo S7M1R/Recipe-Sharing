@@ -2,10 +2,23 @@
   height: max-content;
   width: 30rem;
 }
+.formMain h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.formMain p {
+  display: flex;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 500;
+}
 .example-form {
   display: grid;
   justify-content: center;
-  padding: 2rem 0rem;
+  padding: 0 0;
+  padding-bottom: 1rem;
 }
 .example-full-width {
   width: 28rem;

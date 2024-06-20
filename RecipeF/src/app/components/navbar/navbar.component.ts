@@ -1,15 +1,43 @@
 import { Component, ViewChild } from '@angular/core';
-import {MatIconModule} from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import { MatMenu } from '@angular/material/menu';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatListModule } from '@angular/material/list';
+
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [MatToolbarModule, MatButtonModule, MatIconModule, MatMenu],
-  templateUrl: './navbar.component.html', 
-  styleUrl: './navbar.component.css'
+  imports: [
+    MatToolbarModule,
+    MatButtonModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatListModule,
+  ],
+  templateUrl: './navbar.component.html',
+  styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent {
-  @ViewChild('menu') menu: MatMenu | undefined;
+  @ViewChild('sidenav') sidenav!: MatSidenav;
+
+  isLoggedIn = false;
+
+  toggleSideNav() {
+    this.sidenav.toggle();
+  }
+
+  login() {
+    // Implement login logic here
+    this.isLoggedIn = true;
+  }
+
+  logout() {
+    // Implement logout logic here
+    this.isLoggedIn = false;
+  }
+
+  viewProfile() {
+    // Implement view profile logic here
+  }
 }
