@@ -1,0 +1,49 @@
+<div class="formMain">
+  <form class="example-form" (ngSubmit)="OnSubmit()">
+    <mat-form-field class="example-full-width">
+      <mat-label>Title</mat-label>
+      <input
+        matInput
+        maxlength="50"
+        placeholder="Ex. Chiken Biryani"
+        name="title"
+        [(ngModel)]="recipeItem.title"
+      />
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Description</mat-label>
+      <input
+        matInput
+        maxlength="256"
+        placeholder="Ex. Chiken Biryani In Hyderabadin Style"
+        name="description"
+        [(ngModel)]="recipeItem.description"
+      />
+    </mat-form-field>
+    <mat-radio-group
+      aria-label="Select an option"
+      [(ngModel)]="recipeItem.foodType"
+      name="foodType"
+    >
+      <mat-radio-button value="Veg">Veg</mat-radio-button>
+      <mat-radio-button value="Non-Veg">Non-Veg</mat-radio-button>
+    </mat-radio-group>
+    <mat-form-field class="example-full-width">
+      <mat-label>Image Url</mat-label>
+      <input
+        matInput
+        placeholder="Ex. Image Url..."
+        name="image"
+        [(ngModel)]="recipeItem.image"
+      />
+    </mat-form-field>
+    <div class="submit-btn">
+      <div class="example-button-row">
+        <button mat-stroked-button (click)="onClose()">Cancel</button>
+      </div>
+      <div class="example-button-row">
+        <button mat-flat-button type="submit">Create</button>
+      </div>
+    </div>
+  </form>
+</div>

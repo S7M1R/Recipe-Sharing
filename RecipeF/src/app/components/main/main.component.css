@@ -14,5 +14,31 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 5;
+  gap: 2;
+}
+.fixed-btn {
+  position: fixed;
+  bottom: 100px;
+  right: 100px;
+  width: auto;
+  height: auto;
+  display: flex;
+}
+
+/* Media queries for responsiveness */
+
+/* For small screens (e.g., mobile devices) */
+@media (max-width: 480px) {
+  .fixed-btn {
+    bottom: 20px;
+    right: 10px;
+  }
+}
+
+/* For medium screens (e.g., tablets) */
+@media (max-width: 768px) {
+  .fixed-btn {
+    bottom: 20px;
+    right: 10px;
+  }
 }

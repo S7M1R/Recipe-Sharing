@@ -1,0 +1,42 @@
+.formMain {
+  height: max-content;
+  width: 30rem;
+}
+.example-form {
+  display: grid;
+  justify-content: center;
+  padding: 2rem 0rem;
+}
+.example-full-width {
+  width: 28rem;
+  margin: 1rem 0rem;
+}
+.submit-btn {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.example-button-row {
+  display: table-cell;
+  max-width: 600px;
+}
+
+.example-button-row button {
+  width: 150px;
+}
+
+.mat-mdc-radio-button ~ .mat-mdc-radio-button {
+  margin-left: 16px;
+}
+
+/* For medium screens (e.g., tablets) */
+@media (max-width: 768px) {
+  .formMain {
+    width: 90vw;
+    display: grid;
+    justify-content: center;
+  }
+  .example-full-width {
+    width: 80vw;
+  }
+}
