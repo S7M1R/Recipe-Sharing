@@ -43,7 +43,7 @@ input {
   transition: 1s 0.7s ease-in-out;
   display: grid;
   grid-template-columns: 1fr;
-  z-index: 5;
+  z-index: 1;
 }
 
 form {
@@ -64,7 +64,7 @@ form.sign-up-form {
 }
 
 form.sign-in-form {
-  z-index: 2;
+  z-index: 1;
 }
 
 .title {
@@ -162,7 +162,7 @@ form.sign-in-form {
 }
 
 .btn:hover {
-  background-color: #490077;
+  background-color: #00658d;
 }
 .panels-container {
   position: absolute;
@@ -182,7 +182,7 @@ form.sign-in-form {
   top: -10%;
   right: 48%;
   transform: translateY(-50%);
-  background-image: linear-gradient(-45deg, #040035 0%, rgb(206, 99, 255));
+  background-image: linear-gradient(-45deg, #060047 0%, rgb(141, 255, 230));
   transition: 1.8s ease-in-out;
   border-radius: 50%;
   z-index: 6;

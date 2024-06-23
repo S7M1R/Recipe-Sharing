@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-auth',
@@ -26,4 +27,18 @@ export class AuthComponent {
       this.renderer.removeClass(container, 'sign-up-mode');
     });
   }
+
+  registerationForm = new FormGroup({
+    fullName: new FormControl('', [Validators.required]),
+    userName: new FormControl('', [Validators.required]),
+    password: new FormControl('', [
+      Validators.required,
+      Validators.minLength(6),
+    ]),
+  });
+
+  loginForm = new FormGroup({
+    userName: new FormControl('', [Validators.required]),
+    password: new FormControl('', [Validators.required]),
+  });
 }

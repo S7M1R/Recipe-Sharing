@@ -4,7 +4,15 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgFor } from '@angular/common';
+import { RouterLink } from '@angular/router';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import {
+  faHome,
+  faUser,
+  faSignOutAlt,
+} from '@fortawesome/free-solid-svg-icons';
+import { deprecate } from 'util';
 
 @Component({
   selector: 'app-navbar',
@@ -15,31 +23,29 @@ import { CommonModule } from '@angular/common';
     MatIconModule,
     MatSidenavModule,
     MatListModule,
-    CommonModule,
+    NgFor,
+    RouterLink,
+    FontAwesomeModule,
   ],
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent {
-  @ViewChild('sidenav') sidenav!: MatSidenav;
+  @ViewChild('sidenav')
+  sidenav!: MatSidenav;
 
-  isLoggedIn = false;
-
-  toggleSideNav() {
-    this.sidenav.toggle();
-  }
-
-  login() {
-    // Implement login logic here
-    this.isLoggedIn = true;
-  }
-
+  navLinks = [
+    { path: '', label: 'Home', icon: faHome },
+    {
+      path: 'https://sameeroddinkazi.onrender.com',
+      label: 'About',
+      icon: faUser,
+      external: true,
+    },
+    { path: '', label: 'Logout', icon: faSignOutAlt },
+  ];
   logout() {
-    // Implement logout logic here
-    this.isLoggedIn = false;
-  }
-
-  viewProfile() {
-    // Implement view profile logic here
+    // Add your logout logic here
+    console.log('Logout clicked');
   }
 }
