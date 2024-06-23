@@ -1,11 +1,16 @@
 import { CommonModule } from '@angular/common';
 import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import {
+  FormControl,
+  FormGroup,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-auth',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './auth.component.html',
   styleUrls: ['./auth.component.css'],
 })
@@ -41,4 +46,12 @@ export class AuthComponent {
     userName: new FormControl('', [Validators.required]),
     password: new FormControl('', [Validators.required]),
   });
+
+  handleRegister() {
+    console.log('register: ', this.registerationForm.value);
+  }
+
+  handleLogin() {
+    console.log('login:', this.loginForm.value);
+  }
 }

@@ -2,34 +2,63 @@
   <div class="container">
     <div class="forms-container">
       <div class="signin-signup">
-        <form action="" class="sign-in-form">
+        <form
+          class="sign-in-form"
+          (ngSubmit)="handleLogin()"
+          [formGroup]="loginForm"
+        >
           <h2 class="title">LOGIN</h2>
           <div class="input-field">
             <img src="user-solid.svg" alt="" />
-            <input type="text" placeholder="Username" />
+            <input
+              type="text"
+              placeholder="Username"
+              formControlName="userName"
+            />
           </div>
           <div class="input-field">
             <img src="lock-solid.svg" alt="" />
-            <input type="password" placeholder="Password" />
+            <input
+              type="password"
+              placeholder="Password"
+              formControlName="password"
+            />
           </div>
           <input type="submit" value="Login" class="btn solid" />
           <div class="social-media"></div>
         </form>
 
-        <form action="" class="sign-up-form">
+        <form
+          action=""
+          class="sign-up-form"
+          (ngSubmit)="handleRegister()"
+          [formGroup]="registerationForm"
+        >
           <h2 class="title">Sign Up</h2>
           <div class="input-field">
             <img src="chef.png" alt="" />
 
-            <input type="text" placeholder="Full Name" />
+            <input
+              type="text"
+              placeholder="Full Name"
+              formControlName="fullName"
+            />
           </div>
           <div class="input-field">
             <img src="user-solid.svg" alt="" />
-            <input type="email" placeholder="UserName" />
+            <input
+              type="email"
+              placeholder="UserName"
+              formControlName="userName"
+            />
           </div>
           <div class="input-field">
             <img src="lock-solid.svg" alt="" />
-            <input type="password" placeholder="Password" />
+            <input
+              type="password"
+              placeholder="Password"
+              formControlName="password"
+            />
           </div>
           <input type="submit" value="Sign Up" class="btn solid" />
         </form>
