@@ -2,7 +2,11 @@
   <mat-toolbar color="primary" class="custom-toolbar">
     <div class="logo">Recipe</div>
     <span class="spacer"></span>
-    <button mat-icon-button (click)="sidenav.toggle()" class="hamburger-button">
+    <button
+      mat-icon-button
+      (click)="toggleSidenav(sidenav)"
+      class="hamburger-button"
+    >
       <div class="hamburger-icon">
         <div></div>
         <div></div>
@@ -11,14 +15,26 @@
     </button>
   </mat-toolbar>
 
-  <mat-sidenav-container class="sidenav-container">
+  <mat-sidenav-container
+    class="sidenav-container"
+    [ngClass]="{
+      'sidenav-open': isSidenavOpen,
+      'sidenav-closed': !isSidenavOpen
+    }"
+  >
     <mat-sidenav
       #sidenav
       position="end"
       mode="over"
       class="sidenav"
+      [ngClass]="{
+        'sidenav-open': isSidenavOpen,
+        'sidenav-closed': !isSidenavOpen
+      }"
       [disableClose]="false"
-      (backdropClick)="sidenav.close()"
+      (backdropClick)="closeSidenav(sidenav)"
+      (opened)="sidenavStateService.setSidenavState(true)"
+      (closed)="sidenavStateService.setSidenavState(false)"
     >
       <mat-nav-list>
         <a

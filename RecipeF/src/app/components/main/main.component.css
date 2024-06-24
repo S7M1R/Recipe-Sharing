@@ -8,6 +8,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 50px;
 }
 .card {
   display: flex;
@@ -22,13 +23,24 @@
   width: auto;
   height: auto;
   display: flex;
-  z-index: 1000;
+  transition: z-index 0ms ease-in-out;
+}
+
+.fixed-btn.sidenav-open {
+  z-index: 0;
+}
+
+.fixed-btn.sidenav-closed {
+  z-index: 5;
 }
 
 /* Media queries for responsiveness */
 
 /* For small screens (e.g., mobile devices) */
 @media (max-width: 480px) {
+  .main {
+    overflow-y: hidden; /* Hide vertical scrollbar on mobile */
+  }
   .fixed-btn {
     bottom: 30px;
     right: 10px;
@@ -37,6 +49,9 @@
 
 /* For medium screens (e.g., tablets) */
 @media (max-width: 768px) {
+  .main {
+    overflow-y: hidden; /* Hide vertical scrollbar on mobile */
+  }
   .fixed-btn {
     bottom: 6rem;
     right: 2rem;

@@ -22,7 +22,12 @@
           and cooked to perfection.
         </p>
       </mat-card-content>
-      <mat-card-actions>
+      <mat-card-actions
+        [ngClass]="{
+          'sidenav-open': isSidenavOpen,
+          'sidenav-closed': !isSidenavOpen
+        }"
+      >
         <div>
           <button mat-icon-button>
             <mat-icon>favorite</mat-icon>

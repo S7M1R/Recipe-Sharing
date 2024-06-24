@@ -6,7 +6,13 @@
     <div>No Recipe Exist</div>
     }
   </div>
-  <div class="fixed-btn">
+  <div
+    class="fixed-btn"
+    [ngClass]="{
+      'sidenav-open': isSidenavOpen,
+      'sidenav-closed': !isSidenavOpen
+    }"
+  >
     <button (click)="handleOpenCreateRecipeForm()" mat-fab color="primary">
       <mat-icon aria-hidden="false" fontIcon="add"> </mat-icon>
     </button>

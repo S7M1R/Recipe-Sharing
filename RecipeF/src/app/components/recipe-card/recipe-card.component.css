@@ -33,8 +33,15 @@ mat-card-title {
 mat-card-actions {
   display: flex;
   justify-content: space-between;
+  transition: z-index 0ms ease-in-out;
+}
 
-  z-index: 1;
+mat-card-actions.sidenav-open {
+  z-index: 0;
+}
+
+mat-card-actions.sidenav-closed {
+  z-index: 5;
 }
 
 @media (min-width: 600px) {

@@ -10,6 +10,9 @@
 }
 .container1 {
   height: 50px;
+  position: fixed;
+  z-index: 1;
+  width: 100vw;
 }
 
 mat-toolbar {
@@ -71,7 +74,7 @@ mat-toolbar {
   background: #fff;
   border-left: 2px solid rgb(211, 211, 211);
   border-bottom-left-radius: 30px;
-  z-index: 9; /* Set a higher z-index for the sidenav */
+  z-index: 4; /* Set a higher z-index for the sidenav */
 }
 
 .mat-nav-list a.active {

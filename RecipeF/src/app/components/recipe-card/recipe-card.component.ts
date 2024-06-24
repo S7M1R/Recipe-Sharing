@@ -1,20 +1,43 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatDialog } from '@angular/material/dialog';
-import { MatIcon } from '@angular/material/icon';
+import { MatIconModule } from '@angular/material/icon';
 import { UpdateRecipeFormComponent } from '../update-recipe-form/update-recipe-form.component';
-import { NgIf } from '@angular/common';
+import { NgClass, NgIf } from '@angular/common';
+import { SidenavStateService } from '../../sidenav-state.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-recipe-card',
   standalone: true,
-  imports: [MatCardModule, MatButtonModule, MatIcon, NgIf],
+  imports: [MatCardModule, MatButtonModule, MatIconModule, NgIf, NgClass],
   templateUrl: './recipe-card.component.html',
-  styleUrl: './recipe-card.component.css',
+  styleUrls: ['./recipe-card.component.css'],
 })
-export class RecipeCardComponent {
-  constructor(public dialog: MatDialog) {}
+export class RecipeCardComponent implements OnInit, OnDestroy {
+  isSidenavOpen: boolean = false;
+  sidenavSubscription!: Subscription;
+
+  constructor(
+    public dialog: MatDialog,
+    private sidenavStateService: SidenavStateService
+  ) {}
+
+  ngOnInit() {
+    this.sidenavSubscription = this.sidenavStateService.sidenavOpen$.subscribe(
+      (isOpen) => {
+        this.isSidenavOpen = isOpen;
+      }
+    );
+  }
+
+  ngOnDestroy() {
+    if (this.sidenavSubscription) {
+      this.sidenavSubscription.unsubscribe();
+    }
+  }
+
   handleOpenUpdateForm() {
     this.dialog.open(UpdateRecipeFormComponent);
   }
