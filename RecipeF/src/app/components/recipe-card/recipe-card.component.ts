@@ -1,4 +1,10 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  HostListener,
+  Renderer2,
+  ViewChild,
+} from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatDialog } from '@angular/material/dialog';
@@ -15,19 +21,28 @@ import { Subscription } from 'rxjs';
   templateUrl: './recipe-card.component.html',
   styleUrls: ['./recipe-card.component.css'],
 })
-export class RecipeCardComponent implements OnInit, OnDestroy {
-  isSidenavOpen: boolean = false;
-  sidenavSubscription!: Subscription;
-
+export class RecipeCardComponent {
   constructor(
     public dialog: MatDialog,
-    private sidenavStateService: SidenavStateService
+    private sidenavStateService: SidenavStateService,
+    private elementRef: ElementRef,
+    private renderer: Renderer2
   ) {}
+  handleOpenUpdateForm() {
+    this.dialog.open(UpdateRecipeFormComponent);
+  }
+
+  isSidenavOpen: boolean = false;
+  sidenavSubscription!: Subscription;
 
   ngOnInit() {
     this.sidenavSubscription = this.sidenavStateService.sidenavOpen$.subscribe(
       (isOpen) => {
-        this.isSidenavOpen = isOpen;
+        if (isOpen) {
+          setTimeout(() => (this.isSidenavOpen = isOpen), 500); // 0.5s delay when sidenav opens
+        } else {
+          this.isSidenavOpen = isOpen; // immediate reaction when sidenav closes
+        }
       }
     );
   }
@@ -38,7 +53,28 @@ export class RecipeCardComponent implements OnInit, OnDestroy {
     }
   }
 
-  handleOpenUpdateForm() {
-    this.dialog.open(UpdateRecipeFormComponent);
+  private threshold = -510; // Adjust this threshold as needed
+  private cardActions!: HTMLElement;
+
+  @ViewChild('cardActions') set content(content: ElementRef) {
+    if (content) {
+      this.cardActions = content.nativeElement;
+    }
+  }
+
+  @HostListener('window:scroll')
+  onWindowScroll() {
+    if (!this.cardActions) {
+      return; // Exit if cardActions is not initialized yet
+    }
+
+    const rect = this.elementRef.nativeElement.getBoundingClientRect();
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+    if (rect.top < this.threshold) {
+      this.renderer.addClass(this.cardActions, 'mat-card-actions-hidden');
+    } else {
+      this.renderer.removeClass(this.cardActions, 'mat-card-actions-hidden');
+    }
   }
 }

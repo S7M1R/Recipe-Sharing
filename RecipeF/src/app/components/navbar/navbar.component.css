@@ -23,6 +23,7 @@ mat-toolbar {
   justify-content: space-between;
   padding: 0 2rem;
   border-bottom: 2px solid rgb(211, 211, 211);
+  overscroll-behavior: hidden;
 }
 
 .logo {
