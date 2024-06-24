@@ -41,7 +41,7 @@ mat-card-actions {
 .mat-card-actions-hidden {
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0s;
+  transition: opacity 0s linear;
 }
 
 mat-card-actions.sidenav-open {

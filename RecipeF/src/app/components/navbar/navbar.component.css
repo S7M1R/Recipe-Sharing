@@ -21,9 +21,8 @@ mat-toolbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 2rem;
+  padding: 0 2svw;
   border-bottom: 2px solid rgb(211, 211, 211);
-  overscroll-behavior: hidden;
 }
 
 .logo {

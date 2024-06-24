@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+.body,
+input {
+  font-family: "Poppins", sans-serif;
+}
+
 .body {
   width: 100vw;
   height: 100vh;
@@ -14,15 +19,10 @@
   align-items: center;
 }
 
-.body,
-input {
-  font-family: "Poppins", sans-serif;
-}
-
 .container {
   position: relative;
   min-width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -148,7 +148,7 @@ form.sign-in-form {
 
 .btn {
   width: 180px;
-  background-color: #020036;
+  background-color: #000000;
   border: none;
   outline: none;
   height: 55px;
@@ -162,7 +162,7 @@ form.sign-in-form {
 }
 
 .btn:hover {
-  background-color: #00658d;
+  background-color: #525252;
 }
 .panels-container {
   position: absolute;
@@ -182,7 +182,11 @@ form.sign-in-form {
   top: -10%;
   right: 48%;
   transform: translateY(-50%);
-  background-image: linear-gradient(-45deg, #060047 0%, rgb(141, 255, 230));
+  background-image: linear-gradient(
+    -45deg,
+    rgb(44, 40, 110) 0%,
+    rgb(0, 255, 255)
+  );
   transition: 1.8s ease-in-out;
   border-radius: 50%;
   z-index: 6;
@@ -282,6 +286,13 @@ form.sign-in-form {
 
 .container.sign-up-mode .right-panel {
   pointer-events: all;
+}
+
+#SignupH3 {
+  padding-top: 20px;
+}
+#SigninH3 {
+  margin-bottom: 5px;
 }
 
 @media (max-width: 870px) {
@@ -388,6 +399,21 @@ form.sign-in-form {
 }
 
 @media (max-width: 570px) {
+  .body {
+    width: 100vw;
+    height: 95vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    position: fixed;
+    min-width: 100vw;
+    max-height: 95vh;
+    overflow: hidden;
+  }
+
   form {
     padding: 0 1.5rem;
   }
@@ -405,7 +431,11 @@ form.sign-in-form {
   .container:before {
     bottom: 72%;
     left: 50%;
-    background-image: linear-gradient(-45deg, #010025 0%, rgb(67, 0, 92) 100%);
+    background-image: linear-gradient(
+      -45deg,
+      #020042e7 0%,
+      rgb(54, 0, 73) 100%
+    );
   }
 
   .container.sign-up-mode:before {

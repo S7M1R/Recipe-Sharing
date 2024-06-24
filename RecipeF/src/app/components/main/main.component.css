@@ -43,8 +43,8 @@
     overflow-y: hidden; /* Hide vertical scrollbar on mobile */
   }
   .fixed-btn {
-    bottom: 30px;
-    right: 10px;
+    bottom: 4rem;
+    right: 2rem;
   }
 }
 
@@ -54,7 +54,7 @@
     overflow-y: hidden; /* Hide vertical scrollbar on mobile */
   }
   .fixed-btn {
-    bottom: 6rem;
+    bottom: 4rem;
     right: 2rem;
   }
 }

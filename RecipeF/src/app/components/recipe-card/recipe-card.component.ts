@@ -53,7 +53,7 @@ export class RecipeCardComponent {
     }
   }
 
-  private threshold = -510; // Adjust this threshold as needed
+  private threshold = -490; // Adjust this threshold as needed
   private cardActions!: HTMLElement;
 
   @ViewChild('cardActions') set content(content: ElementRef) {
